@@ -3,7 +3,7 @@ public class Temperature {
 
     // A fórmula para converter temperaturas de graus Celsius para Fahrenheit
     public void comverterTemperature(){
-        double result =(temperature * 1.8) + 32;
-        System.out.printf("Result Cel for Fah %.2f", result);
+       int temperaturaEmFahrenheitInteira = (int) temperaturaEmFahrenheit;
+        System.out.println("A temperatura em Fahrenheit inteira é: " + temperaturaEmFahrenheitInteira);
     }
 }
