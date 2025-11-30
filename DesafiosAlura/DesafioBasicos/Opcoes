@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Opcoes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int opcao = 0;
+        System.out.println("Digite uma opção");
+
+        do {
+            System.out.println("1. Calcular área do quadrado");
+            System.out.println("2. Calcular área do círculo");
+            opcao = sc.nextInt();
+
+            if (opcao > 2){
+                System.out.println("DIGITE UM NÚMERO MENOR");
+                System.exit(0);
+                opcao++;
+            }
+            if (opcao == 1){
+                System.out.println("Digite a largura: ");
+                double num1 = sc.nextDouble();
+
+                System.out.println("Digite um altura: ");
+                double num2 = sc.nextDouble();
+
+                double areaQuadrado = num1 * num2;
+
+                System.out.printf("Área do quadrado é %.1" + "f", areaQuadrado);
+            }
+        }
+        while (opcao == 0);
+    }
+}
