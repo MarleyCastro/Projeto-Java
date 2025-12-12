@@ -1,23 +1,22 @@
-package ContaBancaria;
-
 public class ContaBancaria {
-    private int numeroConta;
-    private double saldo;
-    public String titular;
+    protected double saldo;
 
-    public int getNumeroConta() {
-        return numeroConta;
+    public void  depositar(double valor) {
+        saldo += valor;
+        System.out.println("Deposito de " + valor);
     }
 
-    public void setNumeroConta(int numeroConta) {
-        this.numeroConta = numeroConta;
+    public void  sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de " + valor + " realizado. Saldo atual: " + saldo);
+        } else {
+            System.out.println("Saldo insuficiente para saque.");
+        }
     }
 
-    public double getSaldo() {
-        return saldo;
+    public void  consultarSaldo() {
+        System.out.println("Saldo atual " + saldo);
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
 }
